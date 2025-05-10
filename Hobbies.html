@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Document</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+    <a class="navbar-brand" href="#">
+        <img src="img/Logo-removebg-preview.png" alt="Logo" style="width: 50px;"> 
+    </a>
+    <button class="navbar-toggler d-lg-none" type="button" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button> 
+    <div class="collapse navbar-collapse justify-content-center">
+    <ul class="nav nav-tabs d-none d-lg-flex">
+      <li class="nav-item">
+        <a class="nav-link active"aria-current="page" href="About Us.html">Back</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="About Us.html">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="OurTeam.html">Our Team</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Works.html">Works</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Contact.html">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Pets.html">All Pets</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Offcanvas menu -->
+<div class="offcanvas offcanvas-start offcanvas-custom" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel" data-bs-scroll="true" data-bs-backdrop="false">
+  <div class="offcanvas-header d-flex align-items-center">
+  <h5 class="offcanvas-title" id="offcanvasMenuLabel"></h5>
+  </div>
+      <div class="offcanvas-body">
+      <a href="index.html" tabindex="0">Home</a>
+      <a href="About Us.html" tabindex="0">About Us</a>
+      <a href="OurTeam.html" tabindex="0">Our Team</a>
+      <a href="Works.html" tabindex="0">Works</a>
+      <a href="Contact.html" tabindex="0">Contact</a>
+      <a href="Pets.html" tabindex="0">All Pets</a>
+      </div>
+  </div>
+</div>
+<section class="portfolio" id="portfolio">
+    <div class="content container w-100 min-vh-100 d-flex align-items-center pt-5">
+      <div class="text-content">
+          <h3 class="fs-5">Hi</h3>
+          <h1>
+              I'm <span>Aj <br></span> A Streamer I Usually stream Genshin, Minecraft, and sometimes Our community games with my friends. 
+          </h1>
+      </div>
+      <div class="pic-img-box" >
+          <img src="img/me.jpg" alt="A photo of me" class="rounded-circle img-fluid">
+      </div>
+  </section>
+
+  <section class="p-5 gradient">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6 my-auto">
+          <div class="fw-bold p-3" style="font-size: 5rem;">Games I stream</div>
+          <p class="lead p-3 text-center" style="font-size: 4rem;">
+            Here are some games I stream Alone, sometimes with friends.
+          </p>
+        </div>
+        <div class="col-lg-6 my-auto d-none d-md-grid">
+          <div class="row g-4">
+            <div class="col-6">
+              <img src="img/mclogo.jpg" class="img-fluid rounded-2" />
+            </div>
+            <div class="col-6">
+              <img src="img/Valorant.svg" class="img-fluid rounded-2" />
+            </div>
+            <div class="col-6">
+              <img src="img/GenshinLogo.png" class="img-fluid rounded-2" />
+            </div>
+            <div class="col-6">
+              <img src="img/PhasmoLogo.png" class="img-fluid rounded-2" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
+<script>
+  const toggler = document.querySelector(".navbar-toggler");
+    const offcanvasEl = document.getElementById("offcanvasMenu");
+    const offcanvas = new bootstrap.Offcanvas(offcanvasEl);
+
+    toggler.addEventListener("click", () => {
+      if (offcanvasEl.classList.contains("show")) {
+        offcanvas.hide();
+      } else {
+        offcanvas.show();
+      }
+    });
+
+    offcanvasEl.addEventListener("show.bs.offcanvas", () => {
+      toggler.classList.add("active");
+      toggler.setAttribute("aria-expanded", "true");
+    });
+    offcanvasEl.addEventListener("hide.bs.offcanvas", () => {
+      toggler.classList.remove("active");
+      toggler.setAttribute("aria-expanded", "false");
+    });
+  </script>
+</script>
+</body>
+</html>
