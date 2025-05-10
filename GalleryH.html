@@ -138,6 +138,27 @@
       toggler.classList.remove("active");
       toggler.setAttribute("aria-expanded", "false");
     });
+    document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('a'); // Select all links
+
+    links.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default navigation
+
+            const targetURL = this.getAttribute('href');
+
+            // Add the fade-out class to the body
+            document.body.classList.add('fade-out');
+
+            // Wait for the transition to complete before navigating
+            const transitionDuration = parseFloat(window.getComputedStyle(document.body).transitionDuration) * 1000; // Get duration in milliseconds
+
+            setTimeout(function() {
+                window.location.href = targetURL; // Navigate to the new page
+            }, transitionDuration);
+        });
+    });
+});
   </script>
 </script>
 </body>

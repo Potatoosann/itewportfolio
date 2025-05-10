@@ -1,7 +1,12 @@
 body{
     background-color: #EAB264;
     font-family: 'Times New Roman', Times, serif;
+    transition: opacity 0.3s ease-in-out; 
 }
+body.fade-out {
+  opacity: 0; 
+}
+
  .navbar-toggler {
     width: 38px;
     height: 28px;
